@@ -23,6 +23,7 @@ class makeItRainState extends State<home> {
     });
   }
 
+
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -39,6 +40,7 @@ class makeItRainState extends State<home> {
                   style: new TextStyle(fontSize: 30.0,
                       color: Colors.greenAccent),),
               ),
+
               new Expanded(
                   child: new Center(
                     child: new Text('$_tashbehCount',
@@ -59,6 +61,7 @@ class makeItRainState extends State<home> {
                               color: Colors.black
                           ),)),
                   )),
+
               new Expanded(
                   child: new Center(
                     child: new FlatButton(color: Colors.lightGreen,
@@ -69,11 +72,34 @@ class makeItRainState extends State<home> {
                               fontSize: 18.3,
                               color: Colors.black
                           ),)),
-                  ))
+                  )),
+      new Expanded(
+          child: new Center(
+            child: new FlatButton(color: Colors.lightGreen,
+                textColor: Theme.of(context).buttonColor,
+                onPressed: Icons.save,
+                child: new Text("Save",
+                  style: new TextStyle(
+                      fontSize: 18.3,
+                      color: Colors.black
+                  ),)),)),
+      new Expanded(
+          child: new Center(
+            child: new FlatButton(color: Colors.lightGreen,
+                textColor: Theme.of(context).buttonColor,
+                onPressed: Icons.close,
+                child: new Text("Close App",
+                  style: new TextStyle(
+                      fontSize: 18.3,
+                      color: Colors.black
+                  ),)),))
             ],
           )
 
       ),
+
+
+
     );
   }
 }
