@@ -55,7 +55,7 @@ class makeItRainState extends State<home> {
                     child: new FlatButton(color: Colors.lightGreen,
                         textColor: Theme.of(context).buttonColor,
                         onPressed: counter,
-                        child: new Text("Make it Rain!",
+                        child: new Text("+",
                           style: new TextStyle(
                               fontSize: 18.3,
                               color: Colors.black
@@ -67,7 +67,7 @@ class makeItRainState extends State<home> {
                     child: new FlatButton(color: Colors.lightGreen,
                         textColor: Theme.of(context).buttonColor,
                         onPressed: refresh,
-                        child: new Text("Refresh!",
+                        child: new Text("Restart!",
                           style: new TextStyle(
                               fontSize: 18.3,
                               color: Colors.black
