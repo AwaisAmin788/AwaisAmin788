@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class home extends StatefulWidget{
   @override
   State<StatefulWidget> createState() {
-    // TODO: implement createState
+
     return new makeItRainState();
   }
 
@@ -23,36 +23,35 @@ class makeItRainState extends State<home> {
     });
   }
 
-
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
+
     return new Scaffold(
       appBar: new AppBar(
         title: new Text('Tashbeh Counter'),
-        backgroundColor: Colors.green,
+        backgroundColor: Colors.lightBlueAccent,
       ),
       body: new Container(
           child : new Column(
             children: <Widget>[
               new Center(
-                child: new Text("Tasbeeh!",
-                  style: new TextStyle(fontSize: 30.0,
-                      color: Colors.greenAccent),),
-              ),
+                child: new Text("استغفر الله",
 
+                  style: new TextStyle(fontSize: 30.0,
+                      color: Colors.black),),
+              ),
               new Expanded(
                   child: new Center(
                     child: new Text('$_tashbehCount',
                       style: new TextStyle(
-                          color: _tashbehCount < 50 ? Colors.greenAccent: Colors.red,
+                          color: _tashbehCount < 50 ? Colors.lightBlueAccent: Colors.red,
                           fontSize: 40.3,
                           fontWeight: FontWeight.w500
                       ),),
                   )),
               new Expanded(
                   child: new Center(
-                    child: new FlatButton(color: Colors.lightGreen,
+                    child: new FlatButton(color: Colors.lightBlueAccent,
                         textColor: Theme.of(context).buttonColor,
                         onPressed: counter,
                         child: new Text("+",
@@ -61,45 +60,43 @@ class makeItRainState extends State<home> {
                               color: Colors.black
                           ),)),
                   )),
-
               new Expanded(
                   child: new Center(
-                    child: new FlatButton(color: Colors.lightGreen,
+                    child: new FlatButton(color: Colors.lightBlueAccent,
                         textColor: Theme.of(context).buttonColor,
                         onPressed: refresh,
-                        child: new Text("Restart!",
+                        child: new Text("Restart",
                           style: new TextStyle(
                               fontSize: 18.3,
                               color: Colors.black
                           ),)),
                   )),
-      new Expanded(
-          child: new Center(
-            child: new FlatButton(color: Colors.lightGreen,
-                textColor: Theme.of(context).buttonColor,
-                onPressed: Icons.save,
-                child: new Text("Save",
-                  style: new TextStyle(
-                      fontSize: 18.3,
-                      color: Colors.black
-                  ),)),)),
-      new Expanded(
-          child: new Center(
-            child: new FlatButton(color: Colors.lightGreen,
-                textColor: Theme.of(context).buttonColor,
-                onPressed: Icons.close,
-                child: new Text("Close App",
-                  style: new TextStyle(
-                      fontSize: 18.3,
-                      color: Colors.black
-                  ),)),))
+              new Expanded(
+                  child: new Center(
+                    child: new FlatButton(color: Colors.lightGreen,
+                        textColor: Theme.of(context).buttonColor,
+                        onPressed: refresh,
+                        child: new Text("Save",
+                          style: new TextStyle(
+                              fontSize: 18.3,
+                              color: Colors.black
+                          ),)),
+                  )),
+              new Expanded(
+                  child: new Center(
+                    child: new FlatButton(color: Colors.lightGreen,
+                        textColor: Theme.of(context).buttonColor,
+                        onPressed: refresh,
+                        child: new Text("Close App",
+                          style: new TextStyle(
+                              fontSize: 18.3,
+                              color: Colors.black
+                          ),)),
+                  )),
             ],
           )
 
       ),
-
-
-
     );
   }
 }

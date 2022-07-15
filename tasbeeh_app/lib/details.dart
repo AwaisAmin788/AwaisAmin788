@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'dart:convert';
-import 'package:dzikirapp/component/wrapperDzikir.dart';
-import 'package:dzikirapp/pages/index.dart';
+
 
 class DzikirDetail extends StatefulWidget {
   final String dzikirType;
@@ -61,7 +60,7 @@ class _DzikirDetail extends State<DzikirDetail>
           leading: new IconButton(
               icon: new Icon(Icons.arrow_back),
               onPressed: () {
-                Navigator.of(context).pop(AppIndex);
+                Navigator.of(context).pop();
               }),
           backgroundColor: Color(0xff24573F),
           elevation: 0,
@@ -78,7 +77,7 @@ class _DzikirDetail extends State<DzikirDetail>
                 controller: _tabController,
                 children:
                 List<Widget>.generate(_items.length, (int index) {
-                  return WrapperDzikir(data: _items[index]);
+                  return widget;
                 }),
               )
                   : Container(),

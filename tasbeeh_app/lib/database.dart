@@ -1,11 +1,10 @@
 import 'dart:async';
 import 'package:path/path.dart';
-import 'package:sqflite/sqflite.dart';
 
 class DatabaseHandler {
-  Future<Database> initializeDB() async {
-    String path = await getDatabasesPath();
-    void _createTableSettings(Batch batch) {
+  Future<Null> initializeDB() async {
+    String path = await initializeDB();
+    void _createTableSettings(batch) {
       batch.execute(
         'CREATE TABLE features_setting(id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, featureCode TEXT, active INTEGER, name TEXT)',
       );
@@ -16,7 +15,7 @@ class DatabaseHandler {
           ["dzikir_default", 1, 'Dzikir Reference']);
     }
 
-    void _createTableDzikirDefault(Batch batch) async {
+    void _createTableDzikirDefault( batch) async {
       batch.execute(
         'CREATE TABLE dzikirs_default(id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, name TEXT, qty INTEGER, timer INTEGER, lastcount INTEGER)',
       );
